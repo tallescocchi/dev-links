@@ -26,6 +26,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -34,10 +35,9 @@ body * {
 }
 
 #container {
-  width: 100%;
-  max-width: 588px;
-  margin: 56px auto 0;
-  padding: 0 24px;
+  width: 380px;
+  margin: 0 auto 0;
+  padding: 25px 24px;
 }
 
 #profile {
@@ -155,4 +155,20 @@ footer {
 
 footer span {
   font-size: 20px;
+}
+
+@media (max-width: 400px) {
+  #container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url('./assets/bg-desktop-dark.jpg');
+  }
+  
+  .light {
+    --bg-url: url('./assets/bg-desktop-light.jpg');
+  }
 }
